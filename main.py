@@ -2,6 +2,7 @@ import math
 import random
 import numpy as np
 import tkinter as tk
+import matplotlib.pyplot as plt
 
 # Define the environment and GA parameters
 # tkinter canvas coordinate starts from top-left
@@ -141,6 +142,7 @@ class GeneticPathfinderUI:
         
         # Run GA and visualize
         self.best_fitness = 0
+        self.best_fitness_each_gen = []
         self.best_solution = []
         self.update_generation()
 
@@ -158,6 +160,7 @@ class GeneticPathfinderUI:
             self.best_solution = best_path
 
         self.draw_path(best_path)
+        self.best_fitness_each_gen.append(self.best_fitness)
         
         new_population = elitism(self.population)
         while len(new_population) < population_size:
@@ -173,6 +176,17 @@ class GeneticPathfinderUI:
         else:
             # Log the final best solution at the end
             print("Best solution found:", self.best_solution)
+            self.plot_fitness()
+
+    def plot_fitness(self):
+        """Plot the best fitness per generation using matplotlib."""
+        plt.figure(figsize=(10, 5))
+        plt.plot(self.best_fitness_each_gen, label="Best Fitness")
+        plt.xlabel("Generation")
+        plt.ylabel("Fitness")
+        plt.title("Best Fitness per Generation")
+        plt.legend()
+        plt.show()
 
     def draw_path(self, path):
         self.canvas.delete("all")
@@ -229,5 +243,5 @@ class GeneticPathfinderUI:
                 )
 
 # Run the UI application
-ui = GeneticPathfinderUI(generations=1000)
+ui = GeneticPathfinderUI(generations=200)
 ui.root.mainloop()
