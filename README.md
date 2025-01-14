@@ -32,7 +32,7 @@ This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic A
   - Elitism rate shows minimal impact on performance.  
 
 - **Convergence**:  
-  - Optimal paths achieved within **50–400 generations**.  
+  - Optimal paths (fitness score >= 0.053) achieved within **50–400 generations**.  
 
 - **Balanced Cost Weights**:  
   - A weighted sum of fitness factors ensures effective path optimization.  
@@ -68,17 +68,21 @@ This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic A
 ---
 
 ## 🎮 Usage  
-1. The simulation initializes with randomly placed obstacles.  
-2. Watch the robot's path evolve toward optimal solutions over generations.  
+1. The simulation initializes with randomly placed obstacles.
+   ![A map showing start point, end point, and obstacles](docs/images/map_without_path.png)
+2. Watch the robot's path evolve toward optimal solutions over generations.
+   ![A map showing path from start to end point, avoiding obstacles](docs/images/map_with_path.png)
 3. View real-time updates of:  
    - Obstacles (squares, circles, triangles).  
    - Start and goal points.  
-   - Best path visualization.  
+   - Best path visualization.
 
 ---
 
 ## 📈 Results Visualization  
 The algorithm's performance is tracked by plotting the **best fitness per generation**. This provides insights into the convergence speed and solution quality.  
+![Fitness plot](docs/images/fitness_plot.png)
+![Running log](docs/images/running_log.png)
 
 ---
 
