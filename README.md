@@ -1,11 +1,11 @@
 # Optimal Path Planning with Genetic Algorithm: A Visualization Approach for Obstacle-Avoidance  
 
-## 📋 Overview  
+## Overview  
 This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic Algorithm (GA)** for optimal path planning while avoiding obstacles. The project is part of a **Masters course in Bioinspired Systems**. It showcases the power of GA in solving complex optimization problems, emphasizing parameter tuning and visualization for improved performance.
 
 ---
 
-## 🚀 Features  
+## Features  
 - **Genetic Algorithm Implementation**:  
   - Value encoding for (x, y) coordinates.  
   - Path optimization with fixed start and goal points.  
@@ -26,7 +26,7 @@ This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic A
 
 ---
 
-## 📊 Key Findings  
+## Key Findings  
 - **Parameter Optimization**:  
   - A mutation probability of **0.5** and a mutation range of **±0.75** yield the best results.  
   - Elitism rate shows minimal impact on performance.  
@@ -39,7 +39,7 @@ This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic A
 
 ---
 
-## 🔧 Setup & Installation  
+## Setup & Installation  
 
 ### Prerequisites  
 - **Python 3.8+**  
@@ -67,7 +67,7 @@ This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic A
 
 ---
 
-## 🎮 Usage  
+## Usage  
 1. The simulation initializes with randomly placed obstacles.
    ![A map showing start point, end point, and obstacles](docs/images/map_without_path.png)
 2. Watch the robot's path evolve toward optimal solutions over generations.
@@ -79,12 +79,19 @@ This project demonstrates a **mobile pathfinding robot** utilizing a **Genetic A
 
 ---
 
-## 📈 Results Visualization  
+## Results Visualization  
 The algorithm's performance is tracked by plotting the **best fitness per generation**. This provides insights into the convergence speed and solution quality.  
 ![Fitness plot](docs/images/fitness_plot.png)
 ![Running log](docs/images/running_log.png)
 
 ---
 
-## 🛡 License  
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.  
+## Contributors
+1. [Malik Fajar Mubarok](https://github.com/malikfm)
+2. [Muhammad Rifal Alfarizy](https://github.com/mrifala29)
+3. R. Cahya Hidayat
+
+---
+
+## License  
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
